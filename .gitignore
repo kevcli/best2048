@@ -1,0 +1,11 @@
+# ignore
+www.default
+platforms/android/gen
+platforms/android/bin
+platforms/android/assets/www
+platforms/android/CordovaLib/bin
+platforms/ios/build
+platforms/ios/www
+platforms/ios/Best2048.xcodeproj/project.xcworkspace/xcuserdata
+.DS_Store
+

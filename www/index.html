@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048</title>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+<meta http-equiv='Expires' CONTENT='0'>
+<meta http-equiv='Cache-Control' CONTENT='no-cache'>
+<meta http-equiv='Pragma' CONTENT='no-cache'>
+<meta name="format-detection" content="telephone=no" />
+<script src='lib/jquery-1.9.js'></script>
+<script src='lib/hotjs-src.js'></script>
+<script src="cordova.js"></script>
+<script src='hotjs-ad.js'></script>
+<script src='hotjs-voice.js'></script>
+<script src='lang/en.lang.js'></script>
+<script src='lang/zh.lang.js'></script>
+<script src='main.js'></script>
+<script type="text/javascript">
+function onLoad() {
+	var isMobile = ( /(android|ipad|iphone|ipod)/i.test(navigator.userAgent) );
+
+	if(isMobile) {
+		document.addEventListener("deviceready", main, false);
+	} else {
+		main();
+	}
+}
+</script>
+</head>
+<body onload="onLoad()">
+
+<!-- splash page -->
+<div class='page full' id='splashpage'>
+<table border=0 class='m full' cellspacing=5>
+<tr><td class='m'>
+<img id='appname' class='splash' src='img/appname.png' width=240/><br/>
+<img id='splash' class='splash' src='img/applogo.png' width=240/><br/>
+<p class='I18N' i18n='loading'>Loading ...</p>
+</td></tr>
+</table>
+</div>
+
+  <div class="container page" id="homepage">
+    <div class="heading">
+      <img class='title' src='img/appname.png'/>
+      <a class="restart-button btn round I18N" i18n='newgame'>New Game</a>
+    </div>
+
+    <div class="above-game">
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+      <a class="mute-button btn round I18N" i18n='mute'>Mute</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button I18N" i18n='tryagain'>Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+<p class="game-explanation"><strong class="important I18N" i18n='howtoplay'>How to play:</strong> <span class='I18N' i18n='rule'>Slide screen, join the numbers, get 2048!</span></p>
+    
+   </div>
+
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+</body>
+</html>
