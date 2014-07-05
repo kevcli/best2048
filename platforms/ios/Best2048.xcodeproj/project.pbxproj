@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0EA4BD953F63483595CE8574 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2827708D6F4AF1AD9DAABB /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		10BEAB9AE3C84FFD809FB422 /* CDVAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD17BE474C54896AE25E15C /* CDVAccelerometer.m */; };

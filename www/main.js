@@ -197,7 +197,12 @@ function main() {
 	hotjs.voice.init();
 	
 	//alert('lang: ' + hotjs.i18n.getLang() + ', ' + _T('about'));
-	hotjs.i18n.translate();
+	var isIOS = ( /(ipad|iphone|ipod)/i.test(navigator.userAgent) );
+	if(isIOS) {
+		hotjs.i18n.translate();
+	} else {
+		// TODO: translate for android testing failed, reason unknown.
+	}
 
     loadData();
     updateSettings();

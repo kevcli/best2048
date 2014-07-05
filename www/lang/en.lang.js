@@ -1,6 +1,6 @@
-hotjs.i18n.put('zh', {
+hotjs.i18n.put('en', {
 	'about' : 'About',
-	'howtoplay': 'HOw to play:',
+	'howtoplay': 'How to play:',
 	'loading': 'Loading',
 	'newgame':'New Game',
 	'mute':'Mute',
