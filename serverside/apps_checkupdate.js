@@ -4,6 +4,7 @@ var apps = apps || {};
 apps['com.rjfun.best2048'] = {
 	name : '欢乐2048',
 	icon : 'http://rjfun.com/best2048/icon.png',
+	screenshot : 'http://rjfun.com/best2048/screenshot.jpg',
 	desc : "热门小游戏 2048，没玩过你就OUT了。这是欢乐配音版，根本停不下来，有木有！",
 	android : {
 		version : '1.0.20140705',
@@ -64,7 +65,10 @@ function listApp( div_id ) {
 	for(var k in apps) {
 		var appitem = apps[k];
 		
-		html += "<p><img src='" + appitem.icon + "'/>" + '<br/>' + appitem.name + '<br/>介绍: ' + appitem.desc + '<br/>下载: <ul>';
+		html += "<p><div><img src='" + appitem.icon + "' style='float:left;margin:5px;'/>" + 
+		'<br/><strong>' + appitem.name + '</strong>' +
+		'<br/>介绍: ' + appitem.desc + '</div>' +
+		'<br/>下载: <ul>';
 		for(var i=0; i<platforms.length; i++) {
 			var platform = platforms[i];
 			var veritem = appitem[ platform ];
@@ -72,7 +76,8 @@ function listApp( div_id ) {
 				html += "<li><a href=\"" + veritem.url + "\">" + platform + "版</a>, v" + veritem.version + "</li>";
 			}
 		}
-		html += '<ul></p>';
+		html += '</ul>';
+		html += "<img width=300 src='" + appitem.screenshot + "'/></p>";
 	}
 	
 	var div = document.getElementById( div_id );
@@ -84,8 +89,8 @@ function checkUpdate( manual_check ) {
 	if(manual_check == null) manual_check = true;
 	
 	// not from an cordova apps, ignore
-	if(! app_key) return;
-	if(! app_vercode) return;
+	if(typeof app_key == 'undefined') return;
+	if(typeof app_vercode == 'undefined') return;
 	if(typeof app_data !== 'object') return;
 	if(typeof saveData !== 'function') return;
 	
