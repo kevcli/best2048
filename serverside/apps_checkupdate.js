@@ -8,7 +8,7 @@ apps['com.rjfun.best2048'] = {
 	android : {
 		version : '1.0.20140705',
 		vercode : 20140705,
-		url : 'http://rjfun.com/best2048/jumprope-1.0.20140705.apk'
+		url : 'http://rjfun.com/best2048/best2048-1.0.20140705.apk'
 	},
 	ios : {
 		version : '1.0.20140705',
