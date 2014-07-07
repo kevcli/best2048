@@ -16,7 +16,7 @@
                     "AudioToolbox.framework": [
                         {
                             "xml": "false",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "true",
@@ -57,15 +57,27 @@
                             "count": 1
                         }
                     ],
+                    "Social.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
                     "CoreMotion.framework": [
                         {
                             "xml": "false",
                             "count": 1
                         }
                     ],
-                    "Social.framework": [
+                    "Foundation.framework": [
                         {
-                            "xml": "true",
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "AVFoundation.framework": [
+                        {
+                            "xml": "false",
                             "count": 1
                         }
                     ]
@@ -79,7 +91,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /></feature>",
                             "count": 1
                         },
                         {
@@ -91,11 +103,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"LowLatencyAudio\"><param name=\"ios-package\" value=\"LowLatencyAudio\" /></feature>",
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /></feature>",
+                            "xml": "<feature name=\"LowLatencyAudio\"><param name=\"ios-package\" value=\"LowLatencyAudio\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -107,7 +119,7 @@
         "com.rjfun.cordova.plugin.admob": {
             "PACKAGE_NAME": "com.rjfun.best2048"
         },
-        "org.apache.cordova.device-motion": {
+        "nl.x-services.plugins.socialsharing": {
             "PACKAGE_NAME": "com.rjfun.best2048"
         },
         "org.apache.cordova.dialogs": {
@@ -116,10 +128,10 @@
         "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "com.rjfun.best2048"
         },
-        "com.rjfun.cordova.plugin.lowlatencyaudio": {
+        "org.apache.cordova.device-motion": {
             "PACKAGE_NAME": "com.rjfun.best2048"
         },
-        "nl.x-services.plugins.socialsharing": {
+        "com.rjfun.cordova.plugin.lowlatencyaudio": {
             "PACKAGE_NAME": "com.rjfun.best2048"
         }
     },

@@ -15,7 +15,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.R;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -173,7 +172,6 @@ public class AdMob extends CordovaPlugin {
                     
                 } else {
                     ViewGroup parentView = (ViewGroup) webView.getParent();
-                    parentView.setBackgroundColor(0x0);
                     if (bannerAtTop) {
                         parentView.addView(adView, 0);
                     } else {

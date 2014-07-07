@@ -4,65 +4,23 @@ hotjs.voice = hotjs.voice || {};
 
 (function(){
 	
-//Method 1: get path using the last loaded script, 
-//remember, we must append script in resource preloading.
-function getCurrentScriptPath() {
-	var scripts = document.getElementsByTagName("script");
-	var n = scripts.length;
-	while( n > 0 ) {
-		n --;
-		var url = scripts[ n ].src;
-		if( url.indexOf('hotjs-voice.js') >= 0 ) return url;
-	}
-	return '';
-}
-
-//Method 2: get with error exception
-function getCurrentScriptPath2() {
-	var url = '';
-	try {
-		throw Error("get js path");
-	}catch(ex){
-		if(ex.fileName) { //Firefox
-			url = ex.fileName;
-		} else if(ex.sourceURL) { //Safari
-			url = ex.sourceURL;
-		} else if(ex.stack) { //Chrome or IE10+
-			url = (ex.stack.match(/at\s+(.*?):\d+:\d+/)||['',''])[1];
-		} else {
-			// no such info in ex, iOS 5
-		}
-	}
-	return url;
-}
-
-var __FILE__ = getCurrentScriptPath() || getCurrentScriptPath2();
-
-function _F(f) {
-	return hotjs.getAbsPath(f, __FILE__);
-}
-
-function _T(t) {
-	return hotjs.i18n.get(t);
-}
-
 var music = {
-		'bg': _F('audio/music_bg.mp3')
+		'bg': 'audio/music_bg.mp3'
 };
 
 var fx = {
-        'logo' : _F('audio/logo.mp3'),
-        'happymood' : _F('audio/happymood.mp3'),
-        'click' : _F('audio/button1.mp3'),
-        'bubble' : _F('audio/bubble.mp3'),
-        'bad' : _F('audio/bad_move.mp3'),
-        'praise1' : _F('audio/praise1.mp3'),
-        'praise2' : _F('audio/praise2.mp3'),
-        'praise3' : _F('audio/praise3.mp3'),
-        'praise4' : _F('audio/praise4.mp3'),
-        'praise5' : _F('audio/praise5.mp3'),
-        'fail' : _F('audio/fail.mp3'),
-        'win' : _F('audio/win.mp3')
+        'logo' : 'audio/logo.mp3',
+        'happymood' : 'audio/happymood.mp3',
+        'click' : 'audio/button1.mp3',
+        'bubble' : 'audio/bubble.mp3',
+        'bad' : 'audio/bad_move.mp3',
+        'praise1' : 'audio/praise1.mp3',
+        'praise2' : 'audio/praise2.mp3',
+        'praise3' : 'audio/praise3.mp3',
+        'praise4' : 'audio/praise4.mp3',
+        'praise5' : 'audio/praise5.mp3',
+        'fail' : 'audio/fail.mp3',
+        'win' : 'audio/win.mp3'
 };
 
 function initFX() {
@@ -149,10 +107,32 @@ function toggleAudio( what ) {
 	switchAudio();
 }
 
+var paused = false;
+var last_music_on = true;
+var last_fx_on = true;
+function pauseAudio() {
+	last_music_on = music_on;
+	last_fx_on = fx_on;
+	paused = true;
+	
+	music_on = false;
+	fx_on = false;
+	switchAudio();
+}
+
+function resumeAudio() {
+	music_on = last_music_on;
+	fx_on = last_fx_on;
+	paused = false;
+	
+	switchAudio();
+}
 
 hotjs.voice.init = initFX;
 hotjs.voice.enable = enableAudio;
 hotjs.voice.toggle = toggleAudio;
+hotjs.voice.pause = pauseAudio;
+hotjs.voice.resume = resumeAudio;
 hotjs.voice.say = say;
 hotjs.voice.playMusic = playMusic;
 hotjs.voice.stopAllAudio = stopAllAudio;

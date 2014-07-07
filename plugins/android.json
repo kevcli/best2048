@@ -29,11 +29,11 @@
                     ],
                     "/manifest": [
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
                         }
                     ]
@@ -47,7 +47,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
                             "count": 1
                         },
                         {
@@ -59,11 +59,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"LowLatencyAudio\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.LowLatencyAudio\" /></feature>",
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
+                            "xml": "<feature name=\"LowLatencyAudio\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.LowLatencyAudio\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -75,7 +75,7 @@
         "com.rjfun.cordova.plugin.admob": {
             "PACKAGE_NAME": "com.rjfun.best2048"
         },
-        "org.apache.cordova.device-motion": {
+        "nl.x-services.plugins.socialsharing": {
             "PACKAGE_NAME": "com.rjfun.best2048"
         },
         "org.apache.cordova.dialogs": {
@@ -84,10 +84,10 @@
         "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "com.rjfun.best2048"
         },
-        "com.rjfun.cordova.plugin.lowlatencyaudio": {
+        "org.apache.cordova.device-motion": {
             "PACKAGE_NAME": "com.rjfun.best2048"
         },
-        "nl.x-services.plugins.socialsharing": {
+        "com.rjfun.cordova.plugin.lowlatencyaudio": {
             "PACKAGE_NAME": "com.rjfun.best2048"
         }
     },

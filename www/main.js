@@ -183,18 +183,26 @@ function main() {
     var w = screen.width, h = screen.height;
     console.log( 'screen:' + w + ' x ' + h );
     
-	w = window.innerWidth, h = window.innerHeight;
-    console.log( 'window:' + w + ' x ' + h );
-    
     // we only display ad if screen large enough
-    if(h == w * 1.5) {
+    if((w <= 640) && (h <= w * 1.5)) {
     	// iphone, screen not long enough
     	$('p.game-explanation').hide();
     } else {
         hotjs.Ad.init();
     }
 	
+	w = window.innerWidth, h = window.innerHeight;
+    console.log( 'window:' + w + ' x ' + h );
+    
 	hotjs.voice.init();
+	
+	document.addEventListener("pause", function(){
+		hotjs.voice.pause();
+	}, false);
+	
+	document.addEventListener("resume", function(){
+		hotjs.voice.resume();
+	}, false);
 	
 	//alert('lang: ' + hotjs.i18n.getLang() + ', ' + _T('about'));
 	var isIOS = ( /(ipad|iphone|ipod)/i.test(navigator.userAgent) );
