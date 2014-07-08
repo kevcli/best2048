@@ -1,5 +1,6 @@
 # ignore
 www.default
+ant-build
 platforms/android/gen
 platforms/android/bin
 platforms/android/assets/www
