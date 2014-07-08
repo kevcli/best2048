@@ -5,7 +5,8 @@ html, body {
   padding: 0;
   background: #faf8ef;
   color: #776e65;
-  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: Arial, sans-serif, Droid Sans;
+/*  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif; not working for Android Chinese */
   font-size: 18px; }
 
 body {

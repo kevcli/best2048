@@ -204,13 +204,7 @@ function main() {
 		hotjs.voice.resume();
 	}, false);
 	
-	//alert('lang: ' + hotjs.i18n.getLang() + ', ' + _T('about'));
-	var isIOS = ( /(ipad|iphone|ipod)/i.test(navigator.userAgent) );
-	if(isIOS) {
-		hotjs.i18n.translate();
-	} else {
-		// TODO: translate for android testing failed, reason unknown.
-	}
+	hotjs.i18n.translate();
 
     loadData();
     updateSettings();
