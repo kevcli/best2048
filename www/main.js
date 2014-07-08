@@ -2,8 +2,8 @@
 var device_ready = false;
 
 var app_key = 'com.rjfun.best2048';
-var app_version = '1.0.20140705';
-var app_vercode = 20140705;
+var app_version = '1.0.20140708';
+var app_vercode = 20140708;
 
 var app_url = 'http://rjfun.com/best2048/';
 var autorun_url = app_url + 'autorun.js'; // will run when client start

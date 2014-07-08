@@ -7,9 +7,9 @@ apps['com.rjfun.best2048'] = {
 	screenshot : 'http://rjfun.com/best2048/screenshot.jpg',
 	desc : "热门小游戏 2048，没玩过你就OUT了。这是欢乐配音版，根本停不下来，有木有！",
 	android : {
-		version : '1.0.20140705',
-		vercode : 20140705,
-		url : 'http://rjfun.com/best2048/best2048-1.0.20140705.apk'
+		version : '1.0.20140708',
+		vercode : 20140708,
+		url : 'http://rjfun.com/best2048/best2048-1.0.20140708.apk'
 	},
 	ios : {
 		version : '1.0.20140705',
