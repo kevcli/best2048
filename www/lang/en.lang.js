@@ -1,6 +1,7 @@
 hotjs.i18n.put('en', {
 	'about' : 'About',
 	'howtoplay': 'How to play:',
+	'keepgoing': 'Keep going',
 	'loading': 'Loading',
 	'newgame':'New Game',
 	'mute':'Mute',

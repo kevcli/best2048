@@ -1,6 +1,7 @@
 hotjs.i18n.put('zh', {
 	'about' : '关于',
 	'howtoplay': '玩法：',
+	'keepgoing': '继续挑战',
 	'loading': '欢乐加载中...',
 	'newgame':'重新开始',
 	'mute':'静音',
