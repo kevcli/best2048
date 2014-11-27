@@ -14,8 +14,7 @@ apps['com.rjfun.best2048'] = {
 	ios : {
 		version : '1.0.20140705',
 		vercode : 20140705,
-		url : "javascript:doAlert('已提交苹果审核，敬请期待！');" 
-		// url: 'https://itunes.apple.com/cn/app/tian-tian-tiao-sheng/id892775490?l=zh&ls=1&mt=8'
+		url : "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=896349671&mt=8" 
 	}
 };
 

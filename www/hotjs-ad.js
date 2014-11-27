@@ -38,7 +38,7 @@ hotjs = hotjs || {};
 				am.createBannerView(
 						{
 							'publisherId': adId,
-							'adSize': am.AD_SIZE.BANNER,
+							'adSize': am.AD_SIZE.SMART_BANNER,
 							'bannerAtTop': ad_options.bannerAtTop,
 							'overlap': ad_options.overlap
 						}, function() {
