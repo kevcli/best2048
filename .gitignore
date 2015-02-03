@@ -1,12 +1,5 @@
 # ignore
 www.default
-ant-build
-ant-gen
-local.properties
-platforms/android/gen
-platforms/android/bin
-platforms/android/assets/www
-platforms/android/CordovaLib/bin
 platforms/ios/build
 platforms/ios/www
 platforms/ios/Best2048.xcodeproj/project.xcworkspace/xcuserdata
